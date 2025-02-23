@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const playButton = document.getElementById("play-button");
     const messagePlay = document.getElementById("message-play");
     const videoContainer = document.querySelector(".video-container");
-    const iframe = videoContainer.querySelector("iframe");
+    const iframe = document.getElementById("video-iframe");
+    const playLink = document.getElementById("play-link");
     let contadorValue = 0;
 
     // Função para aumentar o contador
@@ -22,17 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Quando o contador chega a 100, ativa os efeitos
         if (contadorValue >= 100) {
-            // Exibe o botão de Play, a mensagem e o vídeo
-            playButton.style.display = "inline-block";
+            playButton.style.display = "inline-block"; // Exibe o botão de Play
             messagePlay.style.display = "block"; // Exibe a mensagem
-
-            // Quando o botão de play for clicado, exibe o vídeo e começa o áudio
-            playButton.addEventListener("click", () => {
-                videoContainer.style.display = "block"; // Exibe o vídeo
-                iframe.src = "https://www.youtube.com/embed/SETK2maosQY?autoplay=1"; // Adiciona o autoplay ao iframe
-            });
         }
     });
-});
 
+    // Quando o botão de Play for clicado, o usuário é redirecionado para o vídeo do YouTube
+    playLink.addEventListener("click", (e) => {
+        e.preventDefault(); // Impede o comportamento padrão do link para evitar recarregar a página
+        
+        // Redireciona para o vídeo do YouTube
+        window.location.href = "https://www.youtube.com/watch?v=SETK2maosQY"; // URL do vídeo no YouTube
+    });
+});
 

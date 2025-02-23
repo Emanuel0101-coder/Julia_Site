@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(45deg, #ff7b99, #ff6584); /* Gradiente suave de rosa */
+    background: linear-gradient(45deg, #ff7b99, #ff6584);
     color: #fff;
     text-align: center;
     padding: 0;
@@ -22,7 +22,6 @@ h1 {
     letter-spacing: 2px;
 }
 
-/* Texto introdutório */
 .intro-text {
     font-size: 1.3rem;
     color: #fff;
@@ -34,29 +33,23 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Coração interativo */
 .heart {
-    font-size: 140px; /* Coração bem grande */
+    font-size: 140px;
     cursor: pointer;
     display: block;
     margin: 50px auto;
     transition: transform 0.2s ease-in-out, color 0.3s ease;
     color: #fff;
     animation: pulse 2s infinite;
-    -webkit-user-select: none; /* Para o Chrome/Safari */
-    -moz-user-select: none; /* Para o Firefox */
-    -ms-user-select: none; /* Para o IE/Edge */
-    user-select: none; /* Para outros navegadores */
+    user-select: none;
 }
 
-/* Animação de pulsação */
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
 }
 
-/* Estilo para o contador */
 .contador {
     font-size: 3rem;
     font-weight: bold;
@@ -68,16 +61,8 @@ h1 {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    animation: fadeInUp 1s ease-out;
 }
 
-/* Animação para o contador */
-@keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Botão de Play */
 .play-button {
     font-size: 1.5rem;
     background-color: #ff4e89;
@@ -86,25 +71,17 @@ h1 {
     border-radius: 25px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.4s ease;
+    text-decoration: none;
     display: inline-block;
     margin-top: 30px;
-    transform: scale(0.8);
-    animation: growButton 0.6s forwards;
 }
 
-.play-button:hover {
-    background-color: #ff1f6a;
-    transform: scale(1.05);
+.play-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
 }
 
-/* Animação de crescimento do botão */
-@keyframes growButton {
-    0% { transform: scale(0.8); }
-    100% { transform: scale(1); }
-}
-
-/* Mensagem ao clicar no Play */
 .message-play {
     font-size: 1.3rem;
     color: #fff;
@@ -118,7 +95,6 @@ h1 {
     100% { opacity: 1; }
 }
 
-/* Estilo do vídeo */
 .video-container {
     margin-top: 40px;
     margin-bottom: 20px;
@@ -129,53 +105,4 @@ h1 {
     color: #ffb8d1;
     font-weight: bold;
     margin-top: 15px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .intro-text {
-        font-size: 1.1rem;
-    }
-
-    .contador {
-        font-size: 2.5rem;
-        padding: 15px 30px;
-    }
-
-    .heart {
-        font-size: 120px;
-    }
-
-    .play-button {
-        font-size: 1.3rem;
-        padding: 12px 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    .intro-text {
-        font-size: 1rem;
-    }
-
-    .contador {
-        font-size: 2rem;
-        padding: 12px 25px;
-    }
-
-    .heart {
-        font-size: 100px;
-    }
-
-    .play-button {
-        font-size: 1.2rem;
-        padding: 10px 20px;
-    }
 }
