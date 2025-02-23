@@ -43,6 +43,10 @@ h1 {
     transition: transform 0.2s ease-in-out, color 0.3s ease;
     color: #fff;
     animation: pulse 2s infinite;
+    -webkit-user-select: none; /* Para o Chrome/Safari */
+    -moz-user-select: none; /* Para o Firefox */
+    -ms-user-select: none; /* Para o IE/Edge */
+    user-select: none; /* Para outros navegadores */
 }
 
 /* Animação de pulsação */

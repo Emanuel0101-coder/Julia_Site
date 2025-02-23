@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const contador = document.getElementById("contador");
     const playButton = document.getElementById("play-button");
     const messagePlay = document.getElementById("message-play");
+    const videoContainer = document.querySelector(".video-container");
+    const iframe = videoContainer.querySelector("iframe");
     let contadorValue = 0;
 
     // Função para aumentar o contador
@@ -20,10 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Quando o contador chega a 100, ativa os efeitos
         if (contadorValue >= 100) {
-            // Exibe a caixa com o botão de Play e a mensagem
+            // Exibe o botão de Play, a mensagem e o vídeo
             playButton.style.display = "inline-block";
             messagePlay.style.display = "block"; // Exibe a mensagem
+
+            // Quando o botão de play for clicado, exibe o vídeo e começa o áudio
+            playButton.addEventListener("click", () => {
+                videoContainer.style.display = "block"; // Exibe o vídeo
+                iframe.src = "https://www.youtube.com/embed/SETK2maosQY?autoplay=1"; // Adiciona o autoplay ao iframe
+            });
         }
     });
 });
+
 
